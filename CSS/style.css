@@ -28,7 +28,7 @@ body {
     height: 500px;
     border: 12px solid black;
     border-radius: 250px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .clock::after {
