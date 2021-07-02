@@ -12,6 +12,7 @@
 <body>
 
     <div class="date">
+        <h4>Date:</h4>
         <div id="date"></div>
     </div>
 
@@ -65,10 +66,11 @@
 
         <h1 style="color:hsl(0, 50%, 50%);">Set Alarm</h1>
         <form id="alarmEvent">
-            <input type="time" id="alarmTime" placeholder="    hh: mm: ss">
+            <input type="datetime-local" id="alarmTime">
             <br>
-            <input type="button" value="  Set To...  " style="border: 3px solid black; border-radius: 15px;">
+            <!---->
         </form>
+        <button id="setAlarm" onclick="ring(this);" style="border: 3px solid black; border-radius: 15px;">  Set To...  </button>
     </div>
 
     <script src="/JS/behavior.js"></script>

@@ -21,14 +21,33 @@ setInterval(function() {
 
 var date = document.getElementById("date");
 var v = new Date();
-var dd = v.getDate();
-var mm = v.getMonth();
-var yyyy = v.getFullYear();
 
-if (dd < 10) {
-    date.innerText = `0${dd}: ${mm}: ${yyyy}`;
+if (v.getDate() < 10) {
+
+    var dd = "0" + v.getDate().toString();
+} else {
+    dd = v.getDate().toString();
 }
 
-if (mm < 10) {
-    date.innerText = `${dd}: 0${mm}: ${yyyy}`;
+if (v.getMonth() < 10) {
+
+    var mm = "0" + v.getMonth().toString();
+} else {
+    mm = v.getMonth().toString;
+}
+
+var yyyy = v.getFullYear().toString();
+
+date.innerText = dd + ": " + mm + ": " + yyyy;
+
+
+
+// -------------------------------------------------------------------------------------------------------
+
+var sound = new Audio();
+sound.src("../audio/mixkit-game-notification-wave-alarm-987.wav");
+
+function ring() {
+
+    var alarm = document.getElementById("alarmTime");
 }
