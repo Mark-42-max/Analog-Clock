@@ -14,3 +14,21 @@ setInterval(function() {
     document.getElementById("minute").style.transform = `rotate(${mdeg}deg)`;
     document.getElementById("second").style.transform = `rotate(${sdeg}deg)`;
 }, 1000);
+
+
+// -------------------------------------------------------------------------------------------------------
+
+
+var date = document.getElementById("date");
+var v = new Date();
+var dd = v.getDate();
+var mm = v.getMonth();
+var yyyy = v.getFullYear();
+
+if (dd < 10) {
+    date.innerText = `0${dd}: ${mm}: ${yyyy}`;
+}
+
+if (mm < 10) {
+    date.innerText = `${dd}: 0${mm}: ${yyyy}`;
+}

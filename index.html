@@ -10,6 +10,11 @@
 </head>
 
 <body>
+
+    <div class="date">
+        <div id="date"></div>
+    </div>
+
     <div class="clock">
         <div class="num num1 point">
             <div>1</div>
@@ -54,6 +59,16 @@
         <div id="minute"></div>
         <div id="second"></div>
 
+    </div>
+
+    <div class="alarm">
+
+        <h1 style="color:hsl(0, 50%, 50%);">Set Alarm</h1>
+        <form id="alarmEvent">
+            <input type="time" id="alarmTime" placeholder="    hh: mm: ss">
+            <br>
+            <input type="button" value="  Set To...  " style="border: 3px solid black; border-radius: 15px;">
+        </form>
     </div>
 
     <script src="/JS/behavior.js"></script>

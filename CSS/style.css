@@ -7,6 +7,7 @@
 
 :root {
     font-family: 'Anton', sans-serif;
+    --font: 'Anton', sans-serif;
 }
 
 body {
@@ -28,7 +29,7 @@ body {
     height: 500px;
     border: 12px solid black;
     border-radius: 250px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .clock::after {
@@ -201,4 +202,17 @@ body {
     top: 15%;
     left: 50.5%;
     background-color: red;
+}
+
+.date {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    right: 10%;
+}
+
+.alarm {
+    position: relative;
+    left: 10%;
 }
