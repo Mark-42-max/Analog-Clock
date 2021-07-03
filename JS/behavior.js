@@ -44,10 +44,64 @@ date.innerText = dd + ": " + mm + ": " + yyyy;
 
 // -------------------------------------------------------------------------------------------------------
 
-var sound = new Audio();
-sound.src("../audio/mixkit-game-notification-wave-alarm-987.wav");
+var sound = document.getElementById("audio");
+
+function buttonDisplay() {
+
+    document.getElementById("stopAlarm").style.display = `block`;
+    document.getElementById("pauseAlarm").style.display = `block`;
+}
+
+function buttonHide() {
+
+    document.getElementById("stopAlarm").style.display = `none`;
+    document.getElementById("pauseAlarm").style.display = `none`;
+}
 
 function ring() {
 
-    var alarm = document.getElementById("alarmTime");
+    var alarm = document.querySelector('input[type="datetime-local"]').value;
+    const a = new Date(alarm);
+    if (isNaN(a)) {
+
+        alert("Invalid input");
+    }
+
+    now = new Date();
+
+    timeToRing = a - now;
+
+    while (1) {
+
+        if (timeToRing < 0) {
+
+            // alert("Time already passed...");
+            setTimeout(initAlarm(), timeToRing);
+            buttonDisplay();
+            break;
+        }
+        now = new Date();
+
+        timeToRing = a - now;
+    }
+}
+
+function initAlarm() {
+
+    sound.loop = true;
+    sound.play();
+}
+
+function stopRing() {
+
+    window.location.reload();
+}
+
+function pauseRing() {
+
+    sound.pause();
+    setTimeout(function() {
+        sound.loop = true;
+        sound.play();
+    }, 300000);
 }

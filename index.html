@@ -68,9 +68,13 @@
         <form id="alarmEvent">
             <input type="datetime-local" id="alarmTime">
             <br>
-            <!---->
+            <audio src="/audio/alarm.wav" id="audio">
+
+            </audio>
         </form>
-        <button id="setAlarm" onclick="ring(this);" style="border: 3px solid black; border-radius: 15px;">  Set To...  </button>
+        <button id="setAlarm" onclick="ring(this);" style="border: 3px solid black; border-radius: 15px;">  Set To...  </button><br>
+        <button id="stopAlarm" onclick="stopRing(this);" style="border: 3px solid black; border-radius: 15px; display: none;">  Stop!  </button>
+        <button id="pauseAlarm" onclick="pauseRing(this);" style="border: 3px solid black; border-radius: 15px; display: none;">  Repeat 5 min  </button>
     </div>
 
     <script src="/JS/behavior.js"></script>
