@@ -33,7 +33,7 @@ if (v.getMonth() < 10) {
 
     var mm = "0" + v.getMonth().toString();
 } else {
-    mm = v.getMonth().toString;
+    mm = v.getMonth().toString();
 }
 
 var yyyy = v.getFullYear().toString();
